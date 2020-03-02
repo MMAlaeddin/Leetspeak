@@ -18,6 +18,22 @@ namespace Leetspeak.Models
         {
           array[i] = '0';
         }
+        else if (array[i] == 'i')
+        {
+          array[i] = '1';
+        }
+        else if (array[i] == 't' || array[i] == 'T')
+        {
+          array[i] = '7';
+        }
+        }
+        for(int j = 1; j < array.Length; j ++)
+        {
+        int previousLetter = j - 1;
+        if (array[previousLetter] != ' ' && array[j] == 's')
+        {
+          array[j] = 'z';
+        }
       }
       string result = new String(array);
       return result;

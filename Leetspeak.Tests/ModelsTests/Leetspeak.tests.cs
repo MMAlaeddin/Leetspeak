@@ -21,5 +21,26 @@ namespace LeetspeakTranslateTests
       LeetspeakTranslate testLeetSpeak = new LeetspeakTranslate();
       Assert.AreEqual(output, testLeetSpeak.IsLeet("bOOp"));
     }
+    [TestMethod]
+    public void IsLeet_ChangeOToOne_True()
+    {
+      string output = "1gl00";
+      LeetspeakTranslate testLeetSpeak = new LeetspeakTranslate();
+      Assert.AreEqual(output, testLeetSpeak.IsLeet("igloo"));
+    }
+    [TestMethod]
+    public void IsLeet_ChangeOToSeven_True()
+    {
+      string output = "70w3r";
+      LeetspeakTranslate testLeetSpeak = new LeetspeakTranslate();
+      Assert.AreEqual(output, testLeetSpeak.IsLeet("tower"));
+    }
+    [TestMethod]
+    public void IsLeet_ChangeToZ_True()
+    {
+      string output = "s70r3z";
+      LeetspeakTranslate testLeetSpeak = new LeetspeakTranslate();
+      Assert.AreEqual(output, testLeetSpeak.IsLeet("stores"));
+    }
   }
 }
